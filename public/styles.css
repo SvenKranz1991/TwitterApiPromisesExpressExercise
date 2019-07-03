@@ -1,0 +1,89 @@
+/* GENERAL */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* COLOR FOR DIVS TEMPLATE AS CLASSES */
+
+.green {
+    background-color: green;
+}
+
+.purple {
+    background-color: purple;
+}
+
+.red {
+    background-color: tomato;
+}
+
+.blue {
+    background-color: azure;
+}
+
+.pink {
+    background-color: pink;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+body {
+    margin: 0;
+}
+
+#ticker {
+    position: relative;
+    overflow: hidden;
+    border: 1px tomato solid;
+    height: 1.25em;
+}
+
+#headlines {
+    position: absolute;
+    left: 50%;
+    white-space: nowrap;
+
+}
+
+#headlines a {
+    padding-right: 50px;
+    text-decoration: none;
+    color: black;
+    font-family: Helvetica;
+}
+
+main {
+    background-color: tomato;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+
+main img {
+    width: 300px;
+    height: 300px; */
+}
+
+/.front {
+    z-index: 5;
+}
+
+.back {
+    z-index: 10;
+}
+
+.text {
+    background-color: grey;
+    height: 100px;
+    width: 100%;
+}
+
+main h1 {
+    padding-top: 30px;
+}
