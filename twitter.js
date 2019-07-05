@@ -1,13 +1,13 @@
 const https = require("https");
 const { consumerKey, consumerSecret } = require("./secrets");
 
-function trimText(textObj) {
-    var str = textObj;
-    var pos = str.indexOf("http");
-    var sliced = str.slice(0, pos);
-    console.log(pos);
-    return sliced;
-}
+// function trimText(textObj) {
+//     var str = textObj;
+//     var pos = str.indexOf("http");
+//     var sliced = str.slice(0, pos);
+//     console.log(pos);
+//     return sliced;
+// }
 
 exports.makeRequest = function() {
     return new Promise((resolve, reject) => {
@@ -31,8 +31,8 @@ exports.makeRequest = function() {
                 let body = "";
                 res.on("data", chunk => (body += chunk));
                 res.on("end", () => {
-                    console.log("Let me know it Works");
-                    console.log("----------Body---------", body);
+                    // console.log("Let me know it Works");
+                    // console.log("----------Body---------", body);
                     try {
                         body = JSON.parse(body);
 

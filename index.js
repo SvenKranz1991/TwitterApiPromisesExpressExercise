@@ -18,8 +18,6 @@ app.get("/info.json", function(req, res) {
 
                 let mergedResults = [...nytimes, ...bbcworld, ...theonion];
 
-                console.log(mergedResults);
-
                 let sorted = mergedResults.sort((a, b) => {
                     return new Date(b.created_at) - new Date(a.created_at);
                 });
@@ -33,12 +31,12 @@ app.get("/info.json", function(req, res) {
                     })
                     .map(function(t) {
                         return {
-                            source: t.user.name,
-                            text: t.full_text.replace,
+                            text: `${t.user.name}: ${t.full_text}`,
                             href: t.entities.urls[0].url
                         };
                     });
                 res.json(filtered);
+                // console.log(filtered);
             })
             .catch(() => {
                 res.sendStatus(500);
