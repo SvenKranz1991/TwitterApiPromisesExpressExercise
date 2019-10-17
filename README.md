@@ -2,8 +2,6 @@
 
 A small exercise during lecture about using Express with the Twitter API and jQuery in order to create a moving headlines component.
 
-[Exercise on Heroku](https://classicconnectfour.herokuapp.com/)
-
 ![Preview](material/ExercieseForTwitterAPIandExpress.gif)
 
 ## Built With
