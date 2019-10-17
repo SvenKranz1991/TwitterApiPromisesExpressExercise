@@ -1,5 +1,13 @@
 const https = require("https");
-const { consumerKey, consumerSecret } = require("./secrets");
+
+let secrets;
+if (process.env.NODE_ENV == "production") {
+    secrets = process.env; // in prod the secrets are environment variables
+} else {
+    secrets = require("./secrets"); // in dev they are in secrets.json which is listed in .gitignore
+}
+
+// const { consumerKey, consumerSecret } = require("./secrets");
 
 // function trimText(textObj) {
 //     var str = textObj;
@@ -18,7 +26,7 @@ exports.makeRequest = function() {
                 path: "/oauth2/token",
                 headers: {
                     Authorization: `Basic ${Buffer.from(
-                        `${consumerKey}:${consumerSecret}`
+                        `${secrets.consumerKey}:${secrets.consumerSecret}`
                     ).toString("base64")}`,
                     "Content-Type":
                         "application/x-www-form-urlencoded;charset=UTF-8"

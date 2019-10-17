@@ -44,4 +44,6 @@ app.get("/info.json", function(req, res) {
     });
 });
 
-app.listen(8080, () => console.log("Listening on 8080"));
+app.listen(process.env.PORT || 8080, function() {
+    console.log("I'm listening on 8080 or process.env.PORT");
+});
